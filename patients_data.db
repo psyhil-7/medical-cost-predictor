@@ -1,0 +1,34 @@
+import sqlite3
+
+def add_patient(name, age, diagnosis):
+    conn = sqlite3.connect('medical_insurance.db')  # Connect to your database
+    c = conn.cursor()
+
+    c.execute('''
+    INSERT INTO patients (name, age, diagnosis) VALUES (?, ?, ?)
+    ''', (name, age, diagnosis))
+
+    conn.commit()
+    conn.close()
+
+# Add a sample patient
+add_patient("John Doe", 30, "Diabetes")
+
+print("✅ Patient added successfully!")
+
+
+def fetch_patients():
+    conn = sqlite3.connect('medical_insurance.db')  # Connect to your database
+    c = conn.cursor()
+
+    c.execute("SELECT * FROM patients")  # Fetch all patient records
+    records = c.fetchall()  # Store them in a list
+
+    conn.close()
+
+    for row in records:
+        print(row)  # Print each patient's data
+
+# Call the function
+fetch_patients()
+
