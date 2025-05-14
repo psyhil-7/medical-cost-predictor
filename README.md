@@ -47,7 +47,7 @@ Through this project, I learned:
 ## 👨‍💻 Developed By
 
 **Sahil Sunil Mane**  
-M.Sc. Information Technology (2024)  
+M.Sc. Information Technology (2025)  
 Email: psyhilmane@gmail.com  
 GitHub: [https://github.com/psyhil-7](https://github.com/psyhil-7)
 
